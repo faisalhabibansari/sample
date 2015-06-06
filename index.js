@@ -1,6 +1,6 @@
 var app = require('express')();
 var http = require('http').Server(app);
-//var io = require('socket.io')(http);
+var io = require('socket.io')(http);
 var users ={};
 
 app.get('/hello', function(req, res){
@@ -53,7 +53,7 @@ io.on('connection', function(socket){
   });
 });
 */
-/*
+
 io.on('connection', function(socket){
 
     clientId=socket.handshake.query.clientId;
@@ -75,7 +75,7 @@ io.on('connection', function(socket){
     }
   });
 });
-*/
+
 
 
 
